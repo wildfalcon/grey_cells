@@ -1,0 +1,17 @@
+version: "3"
+services:
+
+  postgres:
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - grey_cells-pgsql:/var/lib/postgresql/data
+    ports: 
+      - 5445:5432
+    deploy:
+      placement:
+        constraints: [node.role == manager]    
+      
+volumes:
+  grey_cells-pgsql:

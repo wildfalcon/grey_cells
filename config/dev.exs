@@ -5,7 +5,8 @@ config :grey_cells, GreyCells.Repo,
   username: "postgres",
   password: "postgres",
   database: "grey_cells_dev",
-  hostname: "localhost",
+  hostname: "127.0.0.1",
+  port: 5445,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
